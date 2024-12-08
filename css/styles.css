@@ -153,3 +153,131 @@ header {
 
 /* ------------------------------------- */
 
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+}
+
+.callbacks_container {
+  margin-bottom: 50px;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.callbacks {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.callbacks li {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.callbacks img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: auto;
+  width: 100%;
+  border: 0;
+}
+
+.callbacks .caption {
+  /* display: block; */
+  position: absolute;
+  z-index: 2;
+  text-shadow: none;
+  color: #fff;
+  background: #ff4e57cb;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 30px;
+  margin: 0;
+  max-width: none;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+}
+
+.caption a {
+  color: var(--color-white);
+  background-color: var(--color-teal);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px var(--color-teal) solid;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.caption a:hover {
+  background-color: var(--color-white);
+  color: var(--color-teal);
+}
+
+.callbacks_nav {
+  z-index: 3;
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 0.6;
+  text-indent: -9999px;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 38px;
+  background: transparent url("../lib/responsiveslides/themes/themes.png") no-repeat left 50%;
+
+}
+
+.callbacks_nav:active {
+  opacity: 1.0;
+}
+
+.callbacks_nav.next {
+  left: auto;
+  background-position: right 50%;
+  right: 0;
+}
+
+/* ------------------------------------- */

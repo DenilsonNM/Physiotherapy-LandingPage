@@ -72,11 +72,62 @@
 
   <!-- ------------------------------------- -->
 
-  <main class="callbacks_container">
+  <!-- <main class="callbacks_container">
     <ul class="rslides" id="slider">
       <li><img src="img/page-1_slide01.jpg" alt=""></li>
       <li><img src="img/page-1_slide02.jpg" alt=""></li>
       <li><img src="img/page-1_slide03.jpg" alt=""></li>
+    </ul>
+  </main> -->
+
+  <main class="callbacks_container">
+    <ul class="rslides" id="slider4">
+      <li>
+        <img src="img/page-1_slide01.jpg" alt="">
+        <div class="caption">
+          <article>
+            <h1>Welcome to Physiotherapy</h1>
+            <br>
+            <p>We are focused on your health and well-being and will work with you to achieve your goals as efficiently
+              as
+              possible. We
+              are dedicated to patient-centered, evidence-informed treatment that delivers the best outcome in the
+              shortest possible
+              time.</p>
+          </article>
+          <a href="#">MAKE AN APPOINTMENT</a>
+        </div>
+      </li>
+      <li>
+        <img src="img/page-1_slide02.jpg" alt="">
+        <div class="caption">
+          <article>
+            <h1>A team of Certified Practitioners</h1>
+            <br>
+            <p>We have highly qualified, experienced and patient-oriented physiotherapists. Whether you want to optimize
+              your sporting
+              performance, treat a painful problem or need help with rehabilitation, our physiotherapy clinic can help
+              you.</p>
+          </article>
+          <a href="#">MAKE AN APPOINTMENT</a>
+        </div>
+      </li>
+      <li>
+        <img src="img/page-1_slide03.jpg" alt="">
+        <div class="caption">
+          <article>
+            <h1>#1 physiotherapy Clinic</h1>
+            <br>
+            <p>We are leaders in rehabilitative care and proudly serve the residents and guests of the local area. We
+              are
+              able to
+              provide unmatched physiotherapy care using the latest in physiotherapy research to assist in injury
+              prevention and
+              recovery.</p>
+          </article>
+          <a href="#">MAKE AN APPOINTMENT</a>
+        </div>
+      </li>
     </ul>
   </main>
 
@@ -369,6 +420,77 @@
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59609.454521875225!2d-89.66683633046874!3d20.968937600000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5673df5a889e5f%3A0xe4125da2cf0466c8!2sUnidad%20de%20Medicina%20Familiar%20No.52%20IMSS!5e0!3m2!1ses-419!2smx!4v1733602389438!5m2!1ses-419!2smx"
       style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
+
+  <!-- ------------------------------------- -->
+
+  <script>
+
+    new WOW().init();
+
+    /* ------------------------------------- */
+
+    $("#btn-bars-id").click(function () {
+      $("#nav-menu-id").slideToggle();
+    });
+
+    /* ------------------------------------- */
+
+    $(function () {
+      $("#slider4").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+    });
+
+    /* ------------------------------------- */
+
+    Fancybox.bind('[data-fancybox="gallery"]', {});
+
+    /* ------------------------------------- */
+
+    $(".div_details").click(function () {
+      var t = $(this);
+      var tp = t.next();
+      tp.slideToggle();
+    });
+
+    /* ------------------------------------- */
+
+    $('#back-to-top').click(function () {
+      $('body,html').animate({ scrollTop: 0 }, 500);
+      return false;
+    });
+
+    /* ------------------------------------- */
+
+    function tiempo() {
+      $("#div_modal").addClass("mostrar")
+    }
+    setTimeout(tiempo, 5000);
+
+    $("#cerrar_modal").click(function () {
+      $("#div_modal").removeClass("mostrar");
+    });
+
+    window.onclick = function (event) {
+      if (event.target == div_modal) {
+        $("#div_modal").removeClass("mostrar")
+      }
+    }
+
+  </script>
+
+  <script src="lib/carrousel/carrousel.js"></script>
+
 </body>
 
 </html>
