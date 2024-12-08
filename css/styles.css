@@ -36,6 +36,7 @@ img {
   height: 100%;
   display: block;
   filter: grayscale(100%);
+  transition: all .20s linear;
 }
 
 span {
@@ -43,4 +44,64 @@ span {
   font-weight: bold;
 }
 
+a {
+  display: inline-block;
+  text-decoration: none;
+  transition: all .10s linear;
+}
+
 /* ------------------------------------- */
+
+header {
+  border-bottom: 2px var(--color-rose) solid;
+}
+
+.div_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.div_menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.div_menu figure {
+  width: 250px;
+}
+
+.div_menu img {
+  filter: none;
+}
+
+.nav_menu {
+  display: flex;
+}
+
+.btn_bars {
+  display: none;
+  color: var(--color-black);
+  font-size: larger;
+}
+
+.nav_menu ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_menu a {
+  color: var(--color-gray);
+  font-size: large;
+}
+
+.nav_menu a:hover {
+  color: var(--color-rose);
+}
+
+/* ------------------------------------- */
+
