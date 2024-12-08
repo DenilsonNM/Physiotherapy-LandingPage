@@ -4,6 +4,7 @@
   --color-white: #fff;
   --color-rose: #ff4e56;
   --color-gray: #707070;
+  --color-light-gray: #ececec;
 }
 
 /* ------------------------------------- */
@@ -369,3 +370,61 @@ header {
 }
 
 /* ------------------------------------- */
+
+.section_prices {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 50px 0;
+}
+
+.section_prices article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 350px;
+  padding: 30px 0;
+  background-color: var(--color-light-gray);
+  text-align: center;
+  color: var(--color-gray);
+}
+
+.section_prices ul {
+  list-style: none;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.section_prices li {
+  padding: 10px 0;
+  border-bottom: 1px var(--color-black) solid;
+}
+
+.section_prices h3 {
+  background-color: var(--color-rose);
+  width: 100%;
+  padding: 20px 0;
+  color: var(--color-white);
+}
+
+.section_prices h2 {
+  color: var(--color-rose);
+}
+
+.section_prices a {
+  color: var(--color-black);
+  background-color: var(--color-white);
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 2px var(--color-white) solid;
+}
+
+.section_prices a:hover {
+  background-color: var(--color-rose);
+  color: var(--color-white);
+}
+
+/* ------------------------------------- */
+
