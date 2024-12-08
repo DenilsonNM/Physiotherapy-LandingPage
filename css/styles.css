@@ -54,6 +54,12 @@ a {
 
 header {
   border-bottom: 2px var(--color-rose) solid;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-white);
 }
 
 .div_header {
@@ -101,6 +107,14 @@ header {
 
 .nav_menu a:hover {
   color: var(--color-rose);
+}
+
+.nav_menu ul li:first-child a {
+  color: var(--color-rose);
+}
+
+.nav_menu ul li:first-child a:hover {
+  color: var(--color-teal);
 }
 
 /* ------------------------------------- */
@@ -186,7 +200,8 @@ header {
 }
 
 .callbacks_container {
-  margin-bottom: 50px;
+  margin-top: 70px;
+  margin-bottom: 40px;
   position: relative;
   float: left;
   width: 100%;
@@ -281,3 +296,26 @@ header {
 }
 
 /* ------------------------------------- */
+
+.section_ourstaff {
+  text-align: center;
+}
+
+.div_staffs {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.div_staffs article {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.div_staffs img:hover {
+  filter: none;
+}
+
+/* ------------------------------------- */
+
