@@ -105,3 +105,51 @@ header {
 
 /* ------------------------------------- */
 
+.modal {
+  display: none;
+  background-color: #0000008f;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.article_modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-white);
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.article_modal img {
+  filter: none;
+}
+
+.icon_x {
+  text-align: right;
+  color: var(--color-rose);
+  font-size: larger;
+  cursor: pointer;
+}
+
+.article_modal a {
+  color: var(--color-white);
+  background-color: var(--color-teal);
+  border: 2px var(--color-teal) solid;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+
+.article_modal a:hover {
+  color: var(--color-teal);
+  background-color: var(--color-white);
+}
+
+/* ------------------------------------- */
+
