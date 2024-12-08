@@ -147,7 +147,7 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--color-white);
-  padding: 10px 20px;
+  padding: 10px;
   text-align: center;
   border-radius: 5px;
 }
@@ -174,6 +174,10 @@ header {
 .article_modal a:hover {
   color: var(--color-teal);
   background-color: var(--color-white);
+}
+
+.mostrar {
+  display: flex;
 }
 
 /* ------------------------------------- */
@@ -208,6 +212,7 @@ header {
   float: left;
   width: 100%;
   border: 0;
+  filter: none;
 }
 
 .callbacks_container {
@@ -334,7 +339,7 @@ header {
 
 .div_parallax {
   background-image: url("/img/parallax1.jpg");
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   min-height: 300px;
 
   background-attachment: fixed;
@@ -593,7 +598,7 @@ header {
 
 .div_parallax_form {
   background-image: url("/img/parallax2.jpg");
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   min-height: 400px;
 
   background-attachment: fixed;
@@ -652,9 +657,38 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   padding: 40px 0;
+  position: relative;
 }
 
 footer i:hover {
   cursor: pointer;
   color: var(--color-teal);
+}
+
+.footer-btn-up {
+  color: var(--color-rose);
+  background-color: var(--color-white);
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 20px;
+  z-index: 99;
+}
+
+/* ------------------------------------- */
+
+.section_maps {
+  width: 100%;
+}
+
+.section_maps iframe {
+  width: 100%;
+  height: 300px;
 }
