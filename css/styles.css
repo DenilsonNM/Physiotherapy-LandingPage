@@ -109,8 +109,12 @@ header {
 
 .btn_bars {
   display: none;
-  color: var(--color-black);
+  color: var(--color-gray);
   font-size: larger;
+}
+
+.btn_bars:hover {
+  color: var(--color-rose);
 }
 
 .nav_menu ul {
@@ -282,14 +286,19 @@ header {
 }
 
 .caption {
-  display: flex;
-  align-items: center;
-  gap: 40px;
   clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 100% 100%, 0% 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.caption p {
-  max-width: 95%;
+.div_caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  gap: 40px;
 }
 
 .caption a {
@@ -336,7 +345,12 @@ header {
   right: 0;
 }
 
+.btn_slide {
+  display: none;
+}
+
 /* ------------------------------------- */
+
 
 .section_ourstaff {
   text-align: center;
@@ -420,7 +434,7 @@ header {
 
 .div_back_video {
   margin: 0 auto;
-  width: 650px;
+  max-width: 650px;
 }
 
 .div_video {
@@ -450,6 +464,7 @@ header {
   align-items: center;
   justify-content: space-evenly;
   padding: 50px 0;
+  flex-wrap: wrap;
 }
 
 .div_articles_prices article {
@@ -664,6 +679,7 @@ header {
 .div_details {
   display: flex;
   align-items: center;
+  text-align: left;
   gap: 10px;
   padding: 10px;
   cursor: pointer;
@@ -753,6 +769,7 @@ footer {
   align-items: center;
   padding: 40px 0;
   position: relative;
+  text-align: center;
 }
 
 footer i:hover {
@@ -792,4 +809,224 @@ footer i:hover {
 .section_maps iframe {
   width: 100%;
   height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  /* ------------------------------------- */
+
+  .div_header {
+    position: relative;
+  }
+
+  .btn_bars {
+    display: inline-block;
+  }
+
+  .div_menu {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .div_menu figure {
+    width: 200px;
+  }
+
+  .nav_menu {
+    display: none;
+    border-bottom: 2px var(--color-rose) solid;
+    border-top: 2px var(--color-rose) solid;
+    background-color: #ffffffec;
+    /* display: none; */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+  }
+
+  .nav_menu ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  /* ------------------------------------- */
+
+  .callbacks_container {
+    margin-top: 60px;
+  }
+
+  .callbacks .caption {
+    padding: 10px;
+  }
+
+  .div_caption {
+    gap: 0px;
+  }
+
+  .div_caption article {
+    display: flex;
+    padding: 10px;
+  }
+
+  .caption p {
+    display: none;
+  }
+
+  .caption a {
+    padding: 5px;
+  }
+
+  /* ------------------------------------- */
+
+  .div_staffs {
+    grid-template-columns: auto auto;
+  }
+
+  /* ------------------------------------- */
+
+  .text_parallax {
+    padding: 0 40px;
+  }
+
+  /* ------------------------------------- */
+
+  .div_articles_prices {
+    row-gap: 40px;
+  }
+
+  .div_articles_prices article {
+    width: 300px;
+  }
+
+  /* ------------------------------------- */
+
+  .slide {
+    min-width: 50%;
+  }
+
+  /* ------------------------------------- */
+
+  .section_gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  /* ------------------------------------- */
+
+  .div_acordeon {
+    gap: 10px;
+    padding: 20px 30px;
+  }
+
+  /* ------------------------------------- */
+
+  .article_form {
+    width: 90%;
+  }
+
+  /* ------------------------------------- */
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .div_menu figure {
+    width: 150px;
+  }
+
+  .nav_menu {
+    top: 50px;
+  }
+
+  /* ------------------------------------- */
+
+  .callbacks_container {
+    margin-top: 50px;
+  }
+
+  .caption {
+    display: none;
+    top: 100px;
+  }
+
+  .btn_slide {
+    display: block;
+    color: var(--color-white);
+    background-color: #fd5e66cb;
+    text-align: center;
+    padding: 10px;
+    border: 2px var(--color-rose) solid;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 300;
+  }
+
+  .btn_slide:hover {
+    background-color: #ffffffec;
+    color: var(--color-teal);
+  }
+
+  /* ------------------------------------- */
+
+  .div_staffs {
+    grid-template-columns: auto;
+  }
+
+  /* ------------------------------------- */
+
+  .text_parallax div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* ------------------------------------- */
+
+  .slide {
+    min-width: 100%;
+  }
+
+  /* ------------------------------------- */
+
+  .section_gallery {
+    grid-template-columns: auto auto;
+  }
+
+  /* ------------------------------------- */
+
+  .div_acordeon {
+    flex-direction: column;
+  }
+
+  .div_acordeon_1,
+  .div_acordeon_2 {
+    width: 100%;
+  }
+
+  /* ------------------------------------- */
+
+  footer {
+    padding: 40px 30px;
+  }
+
+
 }
