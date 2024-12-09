@@ -43,10 +43,10 @@
       <nav class="nav_menu">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Our Staff</a></li>
-          <li><a href="#">Useful Info</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contacts</a></li>
+          <li><a href="#section1">Our Staff</a></li>
+          <li><a href="#section2">Services & Prices</a></li>
+          <li><a href="#section3">Useful Info</a></li>
+          <li><a href="#section4">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -126,10 +126,9 @@
   <!-- ------------------------------------- -->
 
   <section class="section_ourstaff ancho">
-
     <h2>Our Staff</h2>
     <br>
-    <div class="div_staffs">
+    <div class="div_staffs" id="section1">
 
       <article>
         <figure>
@@ -199,7 +198,7 @@
 
   <!-- ------------------------------------- -->
 
-  <section class="section_prices ancho">
+  <section class="section_prices ancho" id="section2">
 
     <article>
       <h2>PLAN 1</h2>
@@ -308,7 +307,7 @@
 
   <!-- ------------------------------------- -->
 
-  <section class="section_gallery">
+  <section class="section_gallery" id="section3">
 
     <a href="img/page-1_img04.jpg" data-fancybox="gallery" data-caption="Caption #1">
       <figure>
@@ -422,7 +421,7 @@
 
   <!-- ------------------------------------- -->
 
-  <section class="section_form">
+  <section class="section_form" id="section4">
 
     <div class="div_parallax_form"></div>
 
@@ -444,10 +443,8 @@
 
   <!-- ------------------------------------- -->
 
-
-
   <footer>
-    <a href="#" class="footer-btn-up" id="back-to-top"><i class="fa-solid fa-angle-up"></i></a>
+    <a href="#" class="footer-btn-up" id="back_to_top"><i class="fa-solid fa-angle-up"></i></a>
     <p>Denilson Jesus Nuñez Morales - Instituro Tecnologico de Mérida</p>
     <div>
       <i class="fa-brands fa-x-twitter"></i>
@@ -510,7 +507,7 @@
 
     /* ------------------------------------- */
 
-    $('#back-to-top').click(function () {
+    $('#back_to_top').click(function () {
       $('body,html').animate({ scrollTop: 0 }, 500);
       return false;
     });
