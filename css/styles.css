@@ -54,15 +54,21 @@ a {
 h1 {
   font-size: 42px;
   line-height: 52px;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.100);
 }
 
 h2 {
   font-size: 32px;
   line-height: 42px;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.100);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+hr {
+  border: 1px var(--color-light-gray) solid;
 }
 
 /* ------------------------------------- */
@@ -151,13 +157,19 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--color-white);
-  padding: 10px;
+  padding: 10px 20px;
   text-align: center;
-  border-radius: 5px;
+  font-weight: bold;
+  color: var(--color-gray);
+  clip-path: inset(0 0 0 0 round 15% 5% 15% 5%);
 }
 
 .article_modal img {
   filter: none;
+}
+
+.img_modal_logo {
+  width: 200px;
 }
 
 .icon_x {
@@ -178,6 +190,8 @@ header {
 .article_modal a:hover {
   color: var(--color-teal);
   background-color: var(--color-white);
+  transform: scale(105%);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
 }
 
 .mostrar {
@@ -258,7 +272,7 @@ header {
   z-index: 2;
   text-shadow: none;
   color: #fff;
-  background: #ff4e57cb;
+  background: #fd5e66cb;
   left: 0;
   right: 0;
   bottom: 0;
@@ -270,6 +284,12 @@ header {
 .caption {
   display: flex;
   align-items: center;
+  gap: 40px;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.caption p {
+  max-width: 95%;
 }
 
 .caption a {
@@ -282,12 +302,13 @@ header {
   padding: 20px;
   border: 2px var(--color-teal) solid;
   font-weight: bold;
-  border-radius: 5px;
 }
 
 .caption a:hover {
   background-color: var(--color-white);
   color: var(--color-teal);
+  transform: scale(105%);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
 }
 
 .callbacks_nav {
@@ -319,22 +340,32 @@ header {
 
 .section_ourstaff {
   text-align: center;
+  padding-bottom: 40px;
 }
 
 .div_staffs {
   display: grid;
   grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
 }
 
 .div_staffs article {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  color: var(--color-gray);
 }
 
-.div_staffs img:hover {
+.div_staffs article:hover img {
+  transform: scale(105%);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
   filter: none;
+}
+
+.div_staffs figure {
+  width: 300px;
+  height: 250px;
 }
 
 /* ------------------------------------- */
@@ -368,26 +399,60 @@ header {
   color: var(--color-teal);
   background-color: var(--color-white);
   padding: 30px;
-  border-radius: 5px;
   font-weight: bold;
   border: 2px var(--color-white) solid;
 }
 
 .text_parallax a:hover {
-  background-color: var(--color-teal);
+  background-color: var(--color-rose);
   color: var(--color-white);
+  transform: scale(105%);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
+}
+
+/* ------------------------------------- */
+
+.section_video {
+  background-color: var(--color-rose);
+  padding: 20px;
+  /* clip-path: polygon(95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%, 5% 0); */
+}
+
+.div_back_video {
+  margin: 0 auto;
+  width: 650px;
+}
+
+.div_video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
+}
+
+.div_video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* ------------------------------------- */
 
 .section_prices {
+  text-align: center;
+}
+
+.div_articles_prices {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   padding: 50px 0;
 }
 
-.section_prices article {
+.div_articles_prices article {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -397,41 +462,48 @@ header {
   background-color: var(--color-light-gray);
   text-align: center;
   color: var(--color-gray);
+  transition: all .20s linear;
 }
 
-.section_prices ul {
+.div_articles_prices article:hover {
+  transform: scale(105%);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
+}
+
+.div_articles_prices ul {
   list-style: none;
   width: 100%;
   padding: 0 20px;
 }
 
-.section_prices li {
+.div_articles_prices li {
   padding: 10px 0;
   border-bottom: 1px var(--color-gray) solid;
 }
 
-.section_prices h3 {
+.div_articles_prices h3 {
   background-color: var(--color-rose);
   width: 100%;
   padding: 20px 0;
   color: var(--color-white);
 }
 
-.section_prices h2 {
+.div_articles_prices h2 {
   color: var(--color-rose);
 }
 
-.section_prices a {
+.div_articles_prices a {
   color: var(--color-black);
   background-color: var(--color-white);
   padding: 10px;
-  border-radius: 5px;
   font-weight: bold;
 }
 
-.section_prices a:hover {
+.div_articles_prices a:hover {
   background-color: var(--color-rose);
   color: var(--color-white);
+  transform: scale(105%);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
 }
 
 /* ------------------------------------- */
@@ -464,12 +536,17 @@ header {
 .slide {
   scroll-snap-align: center;
   position: relative;
-  min-width: 50%;
+  min-width: 33%;
   text-align: center;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  transition: all .20s linear;
+}
+
+.slide:hover {
+  transform: scale(105%);
 }
 
 .slide p,
@@ -537,6 +614,12 @@ header {
   font-size: 24px;
 }
 
+.arrow:hover {
+  color: var(--color-teal);
+  transform: scale(105%);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.200);
+}
+
 /* ------------------------------------- */
 
 .section_gallery {
@@ -547,8 +630,14 @@ header {
   margin: 30px 0;
 }
 
+.section_gallery figure {
+  /* overflow: hidden; */
+}
+
 .section_gallery img:hover {
   filter: none;
+  transform: scale(105%);
+  box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.200);
 }
 
 /* ------------------------------------- */
@@ -580,6 +669,7 @@ header {
   cursor: pointer;
   color: var(--color-teal);
   transition: all .10s linear;
+  border-bottom: 1px var(--color-light-gray) solid;
   /* background-color: var(--color-light-gray); */
 }
 
@@ -625,8 +715,7 @@ header {
 }
 
 .article_form input {
-  border: none;
-  background: none;
+  all: unset;
   border-bottom: 2px var(--color-white) solid;
   padding: 20px;
   margin: 10px;
@@ -650,12 +739,14 @@ header {
 .article_form button:hover {
   background-color: var(--color-teal);
   color: var(--color-white);
+  transform: scale(105%);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
 }
 
 /* ------------------------------------- */
 
 footer {
-  background-color: var(--color-gray);
+  background-color: var(--color-black);
   color: var(--color-white);
   display: flex;
   justify-content: space-evenly;
@@ -684,6 +775,12 @@ footer i:hover {
   right: 10px;
   font-size: 20px;
   z-index: 99;
+  border: 2px var(--color-white) solid;
+}
+
+.footer-btn-up:hover {
+  border: 2px var(--color-teal) solid;
+  color: var(--color-teal);
 }
 
 /* ------------------------------------- */
