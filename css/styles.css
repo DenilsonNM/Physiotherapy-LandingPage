@@ -54,13 +54,13 @@ a {
 h1 {
   font-size: 42px;
   line-height: 52px;
-  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.100);
+  /* text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.100); */
 }
 
 h2 {
   font-size: 32px;
   line-height: 42px;
-  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.100);
+  /* text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.100); */
 }
 
 html {
@@ -195,7 +195,7 @@ header {
   color: var(--color-teal);
   background-color: var(--color-white);
   transform: scale(105%);
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.200);
 }
 
 .mostrar {
@@ -317,7 +317,7 @@ header {
   background-color: var(--color-white);
   color: var(--color-teal);
   transform: scale(105%);
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.200);
 }
 
 .callbacks_nav {
@@ -370,7 +370,7 @@ header {
   color: var(--color-gray);
   max-width: 350px;
   transition: all .20s linear;
-  background-color: var(--color-light-gray);
+  border: 2px var(--color-light-gray) solid;
 }
 
 .div_about h3 {
@@ -384,7 +384,8 @@ header {
 
 .div_about article:hover {
   transform: scale(105%);
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
+  border-color: var(--color-white);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.100);
 }
 
 /* ------------------------------------- */
@@ -398,6 +399,7 @@ header {
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: space-evenly;
+  row-gap: 20px;
 }
 
 .div_staffs article {
@@ -406,17 +408,25 @@ header {
   flex-direction: column;
   gap: 20px;
   color: var(--color-gray);
+  transition: all .20s linear;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.100);
+  border: 2px var(--color-white) solid;
 }
 
 .div_staffs article:hover img {
-  transform: scale(105%);
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
   filter: none;
+}
+
+.div_staffs article:hover {
+  border: 2px var(--color-light-gray) solid;
+  box-shadow: none;
+  transform: scale(95%);
 }
 
 .div_staffs figure {
   width: 300px;
   height: 250px;
+  overflow: hidden;
 }
 
 /* ------------------------------------- */
@@ -432,6 +442,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .text_parallax {
@@ -458,7 +469,7 @@ header {
   background-color: var(--color-rose);
   color: var(--color-white);
   transform: scale(105%);
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.250);
 }
 
 /* ------------------------------------- */
@@ -479,7 +490,7 @@ header {
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.250);
 }
 
 .div_video iframe {
@@ -511,15 +522,16 @@ header {
   align-items: center;
   width: 350px;
   padding: 30px 0;
-  background-color: var(--color-light-gray);
+  border: 2px var(--color-light-gray) solid;
   text-align: center;
   color: var(--color-gray);
   transition: all .20s linear;
 }
 
 .div_articles_prices article:hover {
+  border: 2px var(--color-white) solid;
   transform: scale(105%);
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.100);
 }
 
 .div_articles_prices ul {
@@ -530,7 +542,7 @@ header {
 
 .div_articles_prices li {
   padding: 10px 0;
-  border-bottom: 1px var(--color-gray) solid;
+  border-bottom: 2px var(--color-light-gray) solid;
 }
 
 .div_articles_prices h3 {
@@ -545,8 +557,9 @@ header {
 }
 
 .div_articles_prices a {
-  color: var(--color-black);
-  background-color: var(--color-white);
+  color: var(--color-white);
+  background-color: var(--color-teal);
+  border: 2px var(--color-teal) solid;
   padding: 10px;
   font-weight: bold;
 }
@@ -554,8 +567,9 @@ header {
 .div_articles_prices a:hover {
   background-color: var(--color-rose);
   color: var(--color-white);
+  border: 2px var(--color-white) solid;
   transform: scale(105%);
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.200);
 }
 
 /* ------------------------------------- */
@@ -581,6 +595,7 @@ header {
   justify-content: flex-start;
   align-items: stretch;
   gap: 10px;
+  padding: 10px;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
 }
@@ -595,10 +610,14 @@ header {
   flex-direction: column;
   gap: 20px;
   transition: all .20s linear;
+  border: 2px var(--color-white) solid;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.100);
 }
 
 .slide:hover {
-  transform: scale(105%);
+  transform: scale(95%);
+  border: 2px var(--color-light-gray) solid;
+  box-shadow: none;
 }
 
 .slide p,
@@ -654,7 +673,7 @@ header {
 
 .arrow {
   color: var(--color-rose);
-  background-color: var(--color-light-gray);
+  border: 2px var(--color-light-gray) solid;
   text-decoration: none;
   cursor: pointer;
   text-align: center;
@@ -664,12 +683,13 @@ header {
   justify-content: center;
   align-items: center;
   font-size: 24px;
+  transition: all .10s linear;
 }
 
 .arrow:hover {
   color: var(--color-teal);
   transform: scale(105%);
-  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.200);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.100);
 }
 
 /* ------------------------------------- */
@@ -683,13 +703,34 @@ header {
 }
 
 .section_gallery figure {
+  position: relative;
+  transition: all .20s linear;
   /* overflow: hidden; */
 }
 
-.section_gallery img:hover {
+.section_gallery figure:hover img {
   filter: none;
   transform: scale(105%);
-  box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.200);
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.100);
+}
+
+.div_gallery_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--color-white);
+  font-size: 32px;
+  transition: all .20s linear;
+  opacity: 0;
+}
+
+.section_gallery figure:hover .div_gallery_hover {
+  opacity: 1;
 }
 
 /* ------------------------------------- */
@@ -722,7 +763,7 @@ header {
   cursor: pointer;
   color: var(--color-teal);
   transition: all .10s linear;
-  border-bottom: 1px var(--color-light-gray) solid;
+  border-bottom: 2px var(--color-light-gray) solid;
   /* background-color: var(--color-light-gray); */
 }
 
@@ -793,7 +834,7 @@ header {
   background-color: var(--color-teal);
   color: var(--color-white);
   transform: scale(105%);
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.200);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.200);
 }
 
 /* ------------------------------------- */
@@ -809,9 +850,15 @@ footer {
   text-align: center;
 }
 
+footer i {
+  transition: all .20s linear;
+  ;
+  padding: 5px;
+}
+
 footer i:hover {
   cursor: pointer;
-  color: var(--color-teal);
+  color: var(--color-rose);
 }
 
 .footer-btn-up {
