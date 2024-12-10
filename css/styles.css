@@ -426,8 +426,8 @@ header {
 .div_parallax {
   background-image: url("/img/parallax1.jpg");
   /* filter: grayscale(100%); */
-  min-height: 300px;
-
+  height: 300px;
+  width: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -746,8 +746,8 @@ header {
 .div_parallax_form {
   background-image: url("/img/parallax2.jpg");
   /* filter: grayscale(100%); */
-  min-height: 400px;
-
+  height: 400px;
+  width: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
