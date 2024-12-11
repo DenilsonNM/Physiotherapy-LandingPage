@@ -1,13 +1,18 @@
 @media screen and (max-width: 1020px) {
 
   h1 {
-    font-size: 32px;
-    line-height: 42px;
+    font-size: 24px;
+    line-height: 32px;
   }
 
   h2 {
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  body {
+    font-size: 14px;
+    line-height: 20px;
   }
 
   /* ------------------------------------- */
@@ -59,18 +64,8 @@
     padding: 10px;
   }
 
-  .div_caption {
-    font-size: 14px;
-    line-height: 18px;
-  }
-
-  .div_caption h1 {
-    font-size: 24px;
-  }
-
   .div_caption article {
     padding: 10px;
-
   }
 
   .caption a {
@@ -108,7 +103,6 @@
   }
 
   .text_parallax a {
-
     padding: 20px;
   }
 
@@ -162,21 +156,6 @@
 
 @media screen and (max-width: 690px) {
 
-  h1 {
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-  h2 {
-    font-size: 20px;
-    line-height: 22px;
-  }
-
-  body {
-    font-size: 14px;
-    line-height: 20px;
-  }
-
   /* ------------------------------------- */
 
   .div_menu figure {
@@ -190,7 +169,7 @@
   /* ------------------------------------- */
 
   .article_modal {
-    width: 250px;
+    width: 300px;
   }
 
   .img_modal_logo {
