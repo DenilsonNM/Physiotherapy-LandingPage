@@ -55,15 +55,11 @@ img {
   transition: all .20s linear;
 }
 
-span {
-  color: var(--color-teal);
-  font-weight: bold;
-}
-
 a {
   display: inline-block;
   text-decoration: none;
   transition: all .10s linear;
+  cursor: pointer;
 }
 
 h1,
@@ -93,6 +89,16 @@ hr {
 }
 
 /* ------------------------------------- */
+
+span {
+  color: var(--color-teal);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+span:hover {
+  color: var(--color-rose);
+}
 
 header {
   border-bottom: 2px var(--color-rose) solid;
@@ -438,6 +444,10 @@ header {
   border: 2px var(--color-white) solid;
 }
 
+.div_staffs h3 {
+  color: var(--color-rose);
+}
+
 .div_staffs article:hover img {
   filter: none;
 }
@@ -635,7 +645,7 @@ header {
   scroll-snap-align: center;
   position: relative;
   min-width: 33%;
-  text-align: center;
+  text-align: left;
   padding: 20px 40px;
   display: flex;
   flex-direction: column;
@@ -659,6 +669,7 @@ header {
 .slide i {
   font-size: 42px;
   color: var(--color-rose);
+  text-align: center;
 }
 
 .slide a {
