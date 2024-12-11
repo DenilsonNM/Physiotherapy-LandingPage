@@ -1,20 +1,9 @@
-@font-face {
-  font-family: "FunnerDisplay";
-  src: url(/Physiotherapy-LandingPage/tipografias/Funnel_Display/static/FunnelDisplay-Regular.ttf);
-}
-
-@font-face {
-  font-family: "BoodoniModa";
-  src: url(/Physiotherapy-LandingPage/tipografias/Bodoni_Moda/static/BodoniModa_18pt-Regular.ttf);
-}
-
-
 :root {
   --color-teal: #59bda1;
   --color-black: #333;
   --color-back-transparent: #0000008f;
   --color-white: #fff;
-  --color-white-transparent: #ffffffec;
+  --color-white-transparent: #ffffffde;
   --color-rose: #fd6e76;
   --color-rose-transparent: #ff6870cb;
   --color-gray: #7c7c7c;
@@ -36,7 +25,7 @@
 
 body {
   /* font-family: Helvetica; */
-  font-family: "FunnerDisplay";
+  font-family: 'Funnel Display', sans-serif;
   color: var(--color-black);
   line-height: 24px;
   font-size: 16px;
@@ -65,19 +54,24 @@ a {
 h1,
 h2,
 h3 {
-  font-family: "BoodoniModa";
+  font-family: 'DM Serif Text', serif;
+  font-weight: normal;
 }
 
 h1 {
   font-size: 42px;
   line-height: 52px;
-  /* text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.100); */
+  text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.100);
 }
 
 h2 {
   font-size: 32px;
   line-height: 42px;
-  /* text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.100); */
+  text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.100);
+}
+
+h3 {
+  text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.100);
 }
 
 html {
@@ -665,6 +659,8 @@ header {
 .slide p,
 .slide h3 {
   color: var(--color-gray);
+  font-family: 'Funnel Display', sans-serif;
+  text-shadow: none;
 }
 
 .slide i {
@@ -790,6 +786,11 @@ header {
   gap: 20px;
 }
 
+.div_acordeon h3 {
+  font-family: 'Funnel Display', sans-serif;
+  text-shadow: none;
+}
+
 .div_acordeon_1 {
   width: 50%;
 }
@@ -806,6 +807,7 @@ header {
   padding: 10px;
   cursor: pointer;
   color: var(--color-teal);
+  font-weight: bold;
   transition: all .20s linear;
   border-bottom: 2px var(--color-light-gray) solid;
   /* background-color: var(--color-light-gray); */
